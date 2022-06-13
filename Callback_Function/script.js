@@ -1,5 +1,5 @@
 function multiply(a, b, callback) {
-  document.write(`The sum of ${a} and ${b} is ${a * b}.` + "<br>");
+  document.write(`The Multiplication of ${a} and ${b} is ${a * b}.` + "<br>");
   callback();
 }
 
