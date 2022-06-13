@@ -7,6 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Factorial Number</title>
+    <script>
+        function greeting(name) {
+            alert("Hello " + name);
+        }
+
+        function processUserInput(callback) {
+            var name = prompt("Please enter your name.");
+            callback(name);
+        }
+
+        processUserInput(greeting);
+    </script>
 </head>
 
 <body>
