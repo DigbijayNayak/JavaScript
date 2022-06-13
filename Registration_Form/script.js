@@ -1,26 +1,11 @@
-$(document).ready(function () {
-  $("#btn").click(function (e) {
-    var jsonData = {};
-
-    var formData = $("#myform").serializeArray();
-    // console.log(formData);
-
-    $.each(formData, function () {
-      if (jsonData[this.name]) {
-        if (!jsonData[this.name].push) {
-          jsonData[this.name] = [jsonData[this.name]];
-        }
-        jsonData[this.name].push(this.value || "");
-      } else {
-        jsonData[this.name] = this.value || "";
-      }
-    });
-    console.log(jsonData);
-    $.ajax({
-      url: "action.php",
-      type: "POST",
-      data: jsonData,
-    });
-    e.preventDefault();
-  });
-});
+function Factorial() {
+  var number = document.getElementById("number").value;
+  var output = document.getElementById("output");
+  var i, fact;
+  fact = 1;
+  for (i = 1; i <= number; i++) {
+    fact = fact * i;
+  }
+  console.log(fact);
+  output.innerHTML = `<p>The Factorial of ${number} is: ${fact}</p>`;
+}

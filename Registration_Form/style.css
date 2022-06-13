@@ -11,7 +11,7 @@ input[type=text], select, textarea{
 body{
     background-color: #ccc;
 }
-h1, p{
+h4{
     text-align: center;
 }
 input[type = password]{
