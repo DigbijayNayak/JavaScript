@@ -42,10 +42,10 @@ function validateform(event) {
   } else if (address == "") {
     alert("Please Provide Address.");
   }
-  if (langArray.length == 0) {
-    alert("Please select lang");
-    return false;
-  }
+  // if (langArray.length == 0) {
+  //   alert("Please select lang");
+  //   return false;
+  // }
   // if (valid) {
   //   alert("Please Select Language.");
   //   return false;
