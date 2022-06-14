@@ -11,13 +11,13 @@ function validateform(event) {
   var atposition = email.indexOf("@");
   var dotpostion = email.lastIndexOf(".");
   var data = new Object();
-  var i, valid;
-  valid = true;
+  var i;
+  // valid = true;
   var langArray = new Array();
   for (i = 0; i < lang.length; i++) {
     if (lang[i].checked) {
       langArray.push(lang[i].value);
-      valid = false;
+      // valid = false;
     }
   }
   if (userName == null || userName == "") {
