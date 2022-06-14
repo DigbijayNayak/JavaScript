@@ -23,15 +23,15 @@ function validateform(event) {
   if (userName == null || userName == "") {
     alert("Name can't be blank");
     return false;
-  } else if (password.length < 6) {
-    alert("Password must be at least 6 characters long.");
-    return false;
-  } else if (
+  }else if (
     atposition < 1 ||
     dotpostion < atposition + 2 ||
     dotpostion + 2 >= email.length
   ) {
     alert("Please enter a valid e-mail address:");
+    return false;
+  } else if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
     return false;
   } else if (country == "select") {
     alert("Please Select Country.");
