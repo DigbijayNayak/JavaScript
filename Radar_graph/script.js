@@ -1,4 +1,4 @@
-const red = "rgb(255, 99, 132)";
+const red = "rgb(0, 99, 132)";
 const color = Chart.helpers.color;
 const config = {
   type: "radar",
