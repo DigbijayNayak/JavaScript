@@ -1,7 +1,5 @@
 function downloadFile() {
-  fetch(
-    "https://images.unsplash.com/photo-1654789460791-74c79093c37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-  )
+  fetch("https://orangevalleycaa.org/api/videos")
     .then((resp) => resp.blob())
     .then((blob) => {
       const url = window.URL.createObjectURL(blob);
