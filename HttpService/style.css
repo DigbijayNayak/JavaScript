@@ -1,10 +1,10 @@
-body{
+/* body{
     background-color: #ccc;
-}
+} */
 
-.timezone{
+h1{
     text-align: center;
 }
-select, span{
-    margin-top: 12px;
+img{
+    width: 400px;
 }
