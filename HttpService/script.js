@@ -1,7 +1,7 @@
 fetch("https://orangevalleycaa.org/api/videos")
   .then((data) => {
     //   console.log(data);
-    return data.json(); // conerted to object
+    return data.json(); // converted to object
   })
   .then((objectData) => {
     let tableData = "";
