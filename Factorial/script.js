@@ -1,76 +1,15 @@
-form = document.getElementById("myform");
-function validateform(event) {
-  event.preventDefault();
-  var userName = document.myform.uname.value;
-  var email = document.myform.email.value;
-  var password = document.myform.psw.value;
-  var country = document.myform.country.value;
-  var gender = document.myform.gender;
-  var address = document.myform.address.value;
-  var lang = document.getElementsByName("lang");
-  var atposition = email.indexOf("@");
-  var dotpostion = email.lastIndexOf(".");
-  var data = new Object();
-  var i;
-  // valid = true;
-  var langArray = new Array();
-  for (i = 0; i < lang.length; i++) {
-    if (lang[i].checked) {
-      langArray.push(lang[i].value);
-      // valid = false;
+function Factorial(){
+  var number = document.getElementById("number").value;
+  var i, fact;
+  fact = 1;
+  if(number == ""){
+    alert("Please Enter The Number: ");
+    return false;
+  }else{
+    for (i = 1; i <= number; i++) {
+      fact = fact * i;    
     }
-  }
-  if (userName == null || userName == "") {
-    alert("Name can't be blank");
+    document.getElementById("output").innerHTML = `<b>The factorial of ${number} is ${fact} .</b>`;
     return false;
-  }else if (
-    atposition < 1 ||
-    dotpostion < atposition + 2 ||
-    dotpostion + 2 >= email.length
-  ) {
-    alert("Please enter a valid e-mail address:");
-    return false;
-  } else if (password.length < 6) {
-    alert("Password must be at least 6 characters long.");
-    return false;
-  } else if (country == "select") {
-    alert("Please Select Country.");
-    return false;
-  } else if (gender.value == "") {
-    alert("Please Select Gender.");
-    return false;
-  } else if (address == "") {
-    alert("Please Provide Address.");
-  }
-  // if (langArray.length == 0) {
-  //   alert("Please select lang");
-  //   return false;
-  // }
-  // if (valid) {
-  //   alert("Please Select Language.");
-  //   return false;
-  // }
-  // else if (!this.myform.checkbox.checked) {
-  //   alert("Please Select Language.");
-  //   return false;
-  // }
-  // for (i = 0; i < gender.length; i++) {
-  //   if (gender[i].checked) {
-  //     data.gender = gender[i].value;
-  //   }
-  //   if (gender[i].checked == false) {
-  //     alert("Please select gender.");
-  //     return false;
-  //   }
-  // }
-
-  data.userName = userName;
-  data.email = email;
-  data.password = password;
-  data.country = country;
-  data.gender = gender.value;
-  data.lang = langArray;
-  data.address = address;
-  console.log(data);
+  }  
 }
-form.addEventListener("submit", validateform);

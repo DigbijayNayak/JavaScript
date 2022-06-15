@@ -1,9 +1,10 @@
-input[type=text], select, textarea{
+input[type=text]{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
@@ -11,24 +12,13 @@ input[type=text], select, textarea{
 body{
     background-color: #ccc;
 }
-h1, p{
+/* h4{
     text-align: center;
-}
-input[type = password]{
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    /* resize: vertical; */
-}
-
+} */
 .container{
     /* justify-content: center; */
     background-color: #f2f2f2;
-    width: 30%;
+    width: 21%;
     margin: auto;
     padding: 20px;
     /* border: 1px solid black; */
@@ -47,6 +37,6 @@ input[type=submit]:hover{
     background-color: #ccc;
 }
 #space{
-    margin-top: 6px;
+    margin-top: 16px;
     margin-bottom: 16px;
 }
