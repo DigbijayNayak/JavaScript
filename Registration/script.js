@@ -7,23 +7,22 @@ function validateform(event) {
   var country = document.myform.country.value;
   var gender = document.myform.gender;
   var address = document.myform.address.value;
-  var lang = document.getElementsByName("lang");
+  var lang = document.getElementsByName("checkbox");
   var atposition = email.indexOf("@");
   var dotpostion = email.lastIndexOf(".");
   var data = new Object();
   var i;
-  // valid = true;
+
   var langArray = new Array();
   for (i = 0; i < lang.length; i++) {
     if (lang[i].checked) {
       langArray.push(lang[i].value);
-      // valid = false;
     }
   }
   if (userName == null || userName == "") {
     alert("Name can't be blank");
     return false;
-  }else if (
+  } else if (
     atposition < 1 ||
     dotpostion < atposition + 2 ||
     dotpostion + 2 >= email.length
@@ -39,31 +38,13 @@ function validateform(event) {
   } else if (gender.value == "") {
     alert("Please Select Gender.");
     return false;
+  } else if (langArray.length == 0) {
+    alert("Please select language");
+    return false;
   } else if (address == "") {
     alert("Please Provide Address.");
+    return false;
   }
-  // if (langArray.length == 0) {
-  //   alert("Please select lang");
-  //   return false;
-  // }
-  // if (valid) {
-  //   alert("Please Select Language.");
-  //   return false;
-  // }
-  // else if (!this.myform.checkbox.checked) {
-  //   alert("Please Select Language.");
-  //   return false;
-  // }
-  // for (i = 0; i < gender.length; i++) {
-  //   if (gender[i].checked) {
-  //     data.gender = gender[i].value;
-  //   }
-  //   if (gender[i].checked == false) {
-  //     alert("Please select gender.");
-  //     return false;
-  //   }
-  // }
-
   data.userName = userName;
   data.email = email;
   data.password = password;
