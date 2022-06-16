@@ -15,21 +15,3 @@ function downloadFile() {
     })
     .catch(() => alert("oh no!"));
 }
-
-// function downloadFile(data, name = "myFile.txt") {
-//   const blob = new Blob([data], { type: "text/plain" });
-//   const href = URL.createObjectURL(blob);
-//   URL.revokeObjectURL(href);
-//   const a = Object.assign(document.createElement("a"), {
-//     href,
-//     style: "display:none",
-//     download: name,
-//   });
-//   document.body.appendChild(a);
-//   a.click();
-//   URL.revokeObjectURL(href);
-//   a.remove();
-// }
-// const dat =
-//   "https://images.unsplash.com/photo-1654789460791-74c79093c37e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
-// downloadFile(dat);
